@@ -1,0 +1,342 @@
+/* command */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fjalla+One&family=Honk&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&family=Mea+Culpa&family=Mukta:wght@200;300;400;500;600;700;800&family=Nanum+Gothic&family=Nunito:wght@200;700&family=Open+Sans:wght@600&family=Rajdhani:wght@300;400;500;600;700&family=Recursive:wght@300..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika+Negative:wght@300..700&family=Sixtyfour&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap');
+/* player1 player2 */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* X O */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fjalla+One&family=Honk&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&family=Mea+Culpa&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:wght@200;700&family=Open+Sans:wght@600&family=Recursive:wght@300..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika+Negative:wght@300..700&family=Sixtyfour&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap');
+/* scoreboard */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fjalla+One&family=Honk&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&family=Mea+Culpa&family=Mukta:wght@200;300;400;500;600;700;800&family=Nunito:wght@200;700&family=Open+Sans:wght@600&family=Recursive:wght@300..1000&family=Signika+Negative:wght@300..700&family=Sixtyfour&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap');
+
+body {
+    background-color: black;
+    overflow: hidden;
+
+    min-height: 100vh;
+    min-width: 100vw;
+
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+
+.myDiv {
+    /* height: 70vh;
+    width: 70vh; */
+    min-height: 70vh;
+    min-width: 70vh;
+
+    margin-left: 2%;
+    /* margin-top: 12vh; */
+    background-color: aliceblue;
+    border: 3px solid rgb(56, 56, 56);
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.item {
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.info {
+    margin: 2%;
+    /* margin-right: 5%; */
+    height: 70%;
+    width: 50vh;
+    background-color: rgba(227, 67, 67, 0);
+    position: relative;
+    /* float: right; */
+    border: 3px solid rgb(56, 56, 56);
+    border-radius: 8px;
+}
+
+.scoreBoard p {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+
+}
+
+.result {
+    top: 60%;
+    bottom: 0%;
+    left: 10%;
+    right: 10%;
+    margin: auto 0;
+    position: absolute;
+    /* padding: 5% 0%; */
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.button {
+    position: absolute;
+    /* margin: 0 auto; */
+    text-align: center;
+    border-style: none;
+    left: 10%;
+    bottom: 5%;
+    width: 80%;
+
+    cursor: pointer;
+
+    /* font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+    /* width: 100%;
+    height: 100%; */
+}
+
+.btn {
+    /* position: absolute;
+    left: 5%;
+    top: 5%; */
+    /* display: flex;
+    justify-content: baseline; */
+    width: 80%;
+    cursor: pointer;
+    /* padding: 0% 2.5%; */
+    border-style: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin: 2% auto;
+    border: 1px solid rgb(56, 56, 56);
+    color: greenyellow;
+    background-color: rgba(0, 0, 0, 0);
+
+    /* font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+}
+
+.round {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    /* padding: 5% 0%; */
+}
+
+.command {
+    top: 60%;
+    bottom: 0%;
+    left: 10%;
+    right: 10%;
+    margin: auto 0;
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    /* padding: 5% 0%; */
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.score {
+    /* position: fixed;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, 0); */
+
+
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    /* width:40vw; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.p1Score,
+.p2Score {
+    font-size: 3rem;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.p1Score {
+    color: rgb(0, 234, 255);
+}
+
+.p2Score {
+    color: red;
+}
+
+
+
+.x1,
+.x2,
+.x3,
+.x4,
+.x5,
+.x6,
+.x7,
+.x8,
+.x9,
+.o1,
+.o2,
+.o3,
+.o4,
+.o5,
+.o6,
+.o7,
+.o8,
+.o9 {
+    display: none;
+}
+
+.x1,
+.x2,
+.x3,
+.x4,
+.x5,
+.x6,
+.x7,
+.x8,
+.x9 {
+    color: rgb(0, 234, 255);
+}
+
+.o1,
+.o2,
+.o3,
+.o4,
+.o5,
+.o6,
+.o7,
+.o8,
+.o9 {
+    color: red;
+}
+
+.s1,
+.s2,
+.s3,
+.s4,
+.s5,
+.s6,
+.s7,
+.s8,
+.s9 {
+    cursor: pointer;
+}
+
+
+.draw,
+.playerX,
+.playerO {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    display: none;
+}
+
+.playerO {
+    color: red;
+}
+
+.playerX {
+    color: rgb(0, 234, 255);
+}
+
+@media(max-width:650px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #item {
+        font-size: 2rem !important;
+    }
+
+    .info {
+        position: static;
+        width: 80vw;
+        height: 50vh;
+        margin: 0%;
+        margin-right: 0%;
+        word-wrap: break-word;
+        word-break: break-all;
+        margin-bottom: 1%;
+
+    }
+
+    .myDiv {
+        margin-left: 0%;
+        margin-top: 2%;
+        min-height: 40vh !important;
+        min-width: 40vh !important;
+    }
+
+    .scoreBoard p {
+        font-size: 2.5rem;
+    }
+
+    .button {
+        /* position: static;
+        margin: 0 auto; */
+    }
+}
+
+@media(max-width:770px) {
+    .myDiv {
+        min-height: 55vh;
+        min-width: 55vh;
+    }
+
+    .item {
+        font-size: 4rem !important;
+    }
+
+    .command,
+    .result {
+        position: static;
+    }
+}
